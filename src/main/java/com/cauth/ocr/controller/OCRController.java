@@ -24,4 +24,14 @@ public class OCRController {
         }
         return "Invalid image data";
     }
+
+    @GetMapping("/parseDataFromS3")
+    public String parseDataFromS3(@RequestParam(name = "fileName", defaultValue = "CAPTURE.png") String fileName) {
+        try {
+            return ocrReaderService.parseImageFromS3(fileName);
+        } catch (Exception excep) {
+            excep.printStackTrace();
+        }
+        return "Invalid image data";
+    }
 }

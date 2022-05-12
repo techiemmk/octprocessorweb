@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Nestapp Image uploader</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+body {
+  font-family: "Trirong", serif;
+}
+</style>
+</head>
+<body>
+    <div align="center">
+        <div><h3>File name: [[${response.fileName}]]</h3></div>
+        <div><h3>File size: [[${response.fileSize}]]</h3></div>
+        <div><h3>Content Type: [[${response.contentType}]]</h3></div>
+        <div><h3>File Uploaded successfully to:<br>[[${response.s3URLPath}]]</h3></div>
+        <form action="./" method="get"><button type="submit">Back</button></form>
+    </div>
+</body>
+</html>
